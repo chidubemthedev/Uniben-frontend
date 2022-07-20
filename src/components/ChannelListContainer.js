@@ -71,9 +71,9 @@ const ChannelListContent = ({
         <ChannelList
           filters={filters}
           channelRenderFilterFn={customChannelTeamFilter}
-          List={(listprops) => (
+          List={(listProps) => (
             <TeamChannelList
-              {...listprops}
+              {...listProps}
               type="team"
               isCreating={isCreating}
               setIsCreating={setIsCreating}
@@ -82,9 +82,9 @@ const ChannelListContent = ({
               setToggleContainer={setToggleContainer}
             />
           )}
-          Preview={(previewprops) => {
+          Preview={(previewProps) => {
             <TeamChannelPreview
-              {...previewprops}
+              {...previewProps}
               setIsCreating={setIsCreating}
               setIsEditing={setIsEditing}
               setToggleContainer={setToggleContainer}
@@ -96,9 +96,9 @@ const ChannelListContent = ({
         <ChannelList
           filters={filters}
           channelRenderFilterFn={customChannelMessagingFilter}
-          List={(listprops) => (
+          List={(listProps) => (
             <TeamChannelList
-              {...listprops}
+              {...listProps}
               type="messaging"
               isCreating={isCreating}
               setIsCreating={setIsCreating}
@@ -107,9 +107,9 @@ const ChannelListContent = ({
               setToggleContainer={setToggleContainer}
             />
           )}
-          Preview={(previewprops) => {
+          Preview={(previewProps) => {
             <TeamChannelPreview
-              {...previewprops}
+              {...previewProps}
               setIsCreating={setIsCreating}
               setIsEditing={setIsEditing}
               setToggleContainer={setToggleContainer}

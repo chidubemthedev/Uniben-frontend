@@ -35,6 +35,7 @@ const TeamChannelPreview = ({ setActiveChannel, setIsCreating, setIsEditing, set
                 : 'channel-preview__wrapper'
         }
         onClick={() => {
+            console.log(channel);
             setIsCreating(false);
             setIsEditing(false);
             setActiveChannel(channel);
