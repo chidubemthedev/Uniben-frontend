@@ -31,9 +31,9 @@ if (authToken) {
 
 const customStyles = {
   '--primary-color': 'purple',
-  '--md-font': '1.2rem',
-  '--xs-m': '1.2rem',
-  '--xs-p': '1.2rem',
+  '--md-font': '0.7rem',
+  '--xs-m': '0.7rem',
+  '--xs-p': '0.7rem',
 };
 
 function App() {

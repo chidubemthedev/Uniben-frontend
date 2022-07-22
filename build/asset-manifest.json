@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.63640eaa.css",
-    "main.js": "/static/js/main.a78624cc.js",
+    "main.css": "/static/css/main.4fc128c1.css",
+    "main.js": "/static/js/main.2b6028a0.js",
     "static/js/291.b9049444.chunk.js": "/static/js/291.b9049444.chunk.js",
     "static/js/303.cb790455.chunk.js": "/static/js/303.cb790455.chunk.js",
     "static/js/717.fd776f4e.chunk.js": "/static/js/717.fd776f4e.chunk.js",
@@ -11,15 +11,15 @@
     "static/media/signup.jpg": "/static/media/signup.ccc7227fec0352b61c80.jpg",
     "static/media/UnibenLogo.png": "/static/media/UnibenLogo.4c26485d7d5805943868.png",
     "index.html": "/index.html",
-    "main.63640eaa.css.map": "/static/css/main.63640eaa.css.map",
-    "main.a78624cc.js.map": "/static/js/main.a78624cc.js.map",
+    "main.4fc128c1.css.map": "/static/css/main.4fc128c1.css.map",
+    "main.2b6028a0.js.map": "/static/js/main.2b6028a0.js.map",
     "291.b9049444.chunk.js.map": "/static/js/291.b9049444.chunk.js.map",
     "303.cb790455.chunk.js.map": "/static/js/303.cb790455.chunk.js.map",
     "717.fd776f4e.chunk.js.map": "/static/js/717.fd776f4e.chunk.js.map",
     "829.f3889772.chunk.js.map": "/static/js/829.f3889772.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63640eaa.css",
-    "static/js/main.a78624cc.js"
+    "static/css/main.4fc128c1.css",
+    "static/js/main.2b6028a0.js"
   ]
 }

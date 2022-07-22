@@ -1738,6 +1738,14 @@
     width: 100%;
     padding: 10px;
   }
+
+  .str-chat-channel.messaging .str-chat__main-panel {
+    padding: 0%;
+  }
+
+  .str-chat__message-team-content--single {
+    z-index: 0;
+  }
   
   @media screen and (max-width: 960px) {
     .channel-list__container {
@@ -1804,6 +1812,20 @@
       top: 100%;
       left: 5%;
     }
+
+    .str-chat-channel-list.messaging, .str-chat-channel-list.team, .str-chat-channel-list.commerce {
+      position: relative;
+      left: 0px;
+      top: 2%;
+      z-index: 0;
+      min-height: fit-content;
+      overflow-y: auto;
+      box-shadow: 7px 0 9px 0var(--black5),1px 0 0 0 var(--black5);
+      transition: left 200ms ease-in-out;
+      margin: 0 4.5%;
+      background-color: inherit;
+      border-radius: 8px;
+      }
   }
   
   @media screen and (max-width: 650px) {
