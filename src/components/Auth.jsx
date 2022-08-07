@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import signinImage from '../assets/signup.jpg';
+import passwordEye from '../assets/eye.png';
 
 const cookies = new Cookies();
 
@@ -17,10 +18,15 @@ const initialState = {
 const Auth = () => {
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(true);
+  const [show, setShow] = useState(false);
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
+
+  const showHandler = () => {
+    setShow(!show);
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -117,24 +123,26 @@ const Auth = () => {
             <div className="auth__form-container_fields-content_input">
               <label htmlFor="password">Password</label>
               <input
-                type="password"
+                type={show? 'text': 'password'}
                 name="password"
                 placeholder="Password"
                 onChange={handleChange}
                 required
               />
+              <label onClick={showHandler}><img className='password_eye_size' src={passwordEye} alt="" /></label>
             </div>
 
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
-                  type="password"
+                  type={show? 'text': 'password'}
                   name="confirmPassword"
                   placeholder="Confirm Password"
                   onChange={handleChange}
                   required
                 />
+                <label onClick={showHandler}><img className='password_eye_size' src={passwordEye} alt="" /></label>
               </div>
             )}
             <div className="auth__form-container_fields-content_button">
