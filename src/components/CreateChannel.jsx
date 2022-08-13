@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
 import { UserList } from './';
+import Spinner from '../ui/Spinner';
 import { CloseCreateChannel } from '../assets';
 
 const ChannelNameInput = ({ channelName = '', setChannelName }) => {
@@ -28,11 +29,13 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 const CreateChannel = ({ createType, setIsCreating }) => {
   const { client, setActiveChannel } = useChatContext();
   const [selectedUsers, setSelectedUsers] = useState([client.userID || '']);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [channelName, setChannelName] = useState('');
 
   const createChannel = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     try {
       const newChannel = await client.channel(createType, channelName, {
@@ -49,6 +52,7 @@ const CreateChannel = ({ createType, setIsCreating }) => {
     } catch (error) {
       console.log(error);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -70,7 +74,8 @@ const CreateChannel = ({ createType, setIsCreating }) => {
       <UserList setSelectedUsers={setSelectedUsers} />
       <div className="create-channel__button-wrapper" onClick={createChannel}>
         <p>
-          {createType === 'team' ? 'Create Channel' : 'Create Message Group'}
+          {isLoading ? (<Spinner />) : (createType === 'team' ? 'Create Channel' : 'Create Message Group')}
+          {/* {createType === 'team' ? 'Create Channel' : 'Create Message Group'} */}
         </p>
       </div>
     </div>

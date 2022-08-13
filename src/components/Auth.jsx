@@ -3,6 +3,7 @@ import Cookies from 'universal-cookie';
 import axios from 'axios';
 import signinImage from '../assets/signup.jpg';
 import passwordEye from '../assets/eye.png';
+import Spinner from '../ui/Spinner';
 
 const cookies = new Cookies();
 
@@ -19,6 +20,7 @@ const Auth = () => {
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(true);
   const [show, setShow] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -31,6 +33,7 @@ const Auth = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(form);
+    setIsLoading(true);
 
     const { username, password, phoneNumber, avatarURL } = form;
 
@@ -57,6 +60,7 @@ const Auth = () => {
       cookies.set('hashedPassword', hashedPassword);
     }
 
+    setIsLoading(false);
     window.location.reload();
   };
 
@@ -146,7 +150,8 @@ const Auth = () => {
               </div>
             )}
             <div className="auth__form-container_fields-content_button">
-              <button>{isSignup ? 'Sign Up' : 'Sign In'}</button>
+              {isLoading ? (<button className='sign_button_width'><Spinner /></button>) : (<button className='sign_button_width'> {isSignup ? 'Sign Up' : 'Sign In'}</button>)}
+              {/* <button>{isSignup ? 'Sign Up' : 'Sign In'}</button> */}
             </div>
           </form>
 
