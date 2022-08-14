@@ -21,9 +21,8 @@
     background-color: #fff;
     position: absolute;
     right: 0.5rem;
-    top: 0.5rem;
+    top: 43%;
     cursor: pointer;
-    border: 1px solid #ccc;
     transition: all 0.3s ease-in-out;
   }
 
