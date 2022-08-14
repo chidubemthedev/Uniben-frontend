@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
 import { UserList } from './';
+import Spinner from '../ui/Spinner';
 import { CloseCreateChannel } from '../assets';
 
 const ChannelNameInput = ({ channelName = '', setChannelName }) => {
@@ -29,9 +30,11 @@ const EditChannel = ({ setIsEditing }) => {
   const { channel } = useChatContext();
   const [channelName, setChannelName] = useState(channel?.data?.name);
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const updateChannel = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     const nameChanged = channelName !== (channel.data.name || channel.data.id);
 
@@ -49,6 +52,7 @@ const EditChannel = ({ setIsEditing }) => {
     setChannelName(null);
     setIsEditing(false);
     setSelectedUsers([]);
+    setIsLoading(false);
   };
 
   return (
@@ -64,7 +68,8 @@ const EditChannel = ({ setIsEditing }) => {
       />
       <UserList setSelectedUsers={setSelectedUsers} />
       <div className="edit-channel__button-wrapper" onClick={updateChannel}>
-        <p>Save Changes</p>
+        <p>{isLoading ? (<Spinner/>) : "Save Changes"}</p>
+        {/* <p>Save Changes</p> */}
       </div>
     </div>
   );

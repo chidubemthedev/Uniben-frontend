@@ -26,7 +26,7 @@ const SideBar = ({ logout }) => (
 
 const CompanyHeader = () => (
     <div className="channel-list__header">
-        <p className="channel-list__header__text">UNIBEN DISCOURSE</p>
+        <p className="channel-list__header__text">Uniben Staff-room</p>
     </div>
 )
 
