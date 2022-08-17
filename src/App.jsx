@@ -9,7 +9,7 @@ import { ChannelContainer, ChannelListContainer, Auth } from './components';
 
 const cookies = new Cookies();
 
-const apiKey = 'fyckwtqmwupm';
+const apiKey = 'w87tbht572rw';
 
 const authToken = cookies.get('token');
 
