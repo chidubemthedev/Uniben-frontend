@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.724e2738.css",
+    "main.css": "/static/css/main.014faabb.css",
     "main.js": "/static/js/main.a81f265e.js",
     "static/js/291.b9049444.chunk.js": "/static/js/291.b9049444.chunk.js",
     "static/js/303.cb790455.chunk.js": "/static/js/303.cb790455.chunk.js",
@@ -12,7 +12,7 @@
     "static/media/UnibenLogo.png": "/static/media/UnibenLogo.4c26485d7d5805943868.png",
     "service-worker.js": "/service-worker.js",
     "index.html": "/index.html",
-    "main.724e2738.css.map": "/static/css/main.724e2738.css.map",
+    "main.014faabb.css.map": "/static/css/main.014faabb.css.map",
     "main.a81f265e.js.map": "/static/js/main.a81f265e.js.map",
     "291.b9049444.chunk.js.map": "/static/js/291.b9049444.chunk.js.map",
     "303.cb790455.chunk.js.map": "/static/js/303.cb790455.chunk.js.map",
@@ -20,7 +20,7 @@
     "829.f3889772.chunk.js.map": "/static/js/829.f3889772.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.724e2738.css",
+    "static/css/main.014faabb.css",
     "static/js/main.a81f265e.js"
   ]
 }

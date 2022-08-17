@@ -225,6 +225,8 @@
   .str-chat-channel-list {
     /* height: fit-content; */
     overflow-y: scroll;
+    min-height: auto;
+    max-height: 50vh;
   }
 
   .str-chat.messaging {
