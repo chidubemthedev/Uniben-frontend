@@ -37,7 +37,7 @@ const Auth = () => {
 
     const { username, password, phoneNumber, avatarURL } = form;
 
-    const URL = 'https://uniben-backend.herokuapp.com/auth';
+    const URL = 'https://satisfying-cloudy-raver.glitch.me/auth';
 
     const {
       data: { token, userId, hashedPassword, fullName },
